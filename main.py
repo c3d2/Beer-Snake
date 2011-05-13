@@ -137,7 +137,7 @@ class Main:
 		self.worm_y = 0
 		self.worm_dir = 0
 
-		self.speed = 3
+		self.speed = 4
 		self.length = 20
 
 		self.score = 0
@@ -194,7 +194,7 @@ class Main:
 	def in_game_screen(self):
 
 		# drunkenness
-		self.worm_dir += math.sin(self.ticks * 0.2 ) * 0.004 * self.score
+		self.worm_dir += math.sin(self.ticks * 0.2 ) * 0.008 * self.score
 
 		self.worm_dir += (engine.keystate(K_RIGHT) - engine.keystate(K_LEFT)) * 0.1
 		dx = math.sin(self.worm_dir) * self.speed
